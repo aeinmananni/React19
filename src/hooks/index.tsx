@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useTransition } from "react";
 
-type PageType = "Home" | "Products" | "About";
+type PageType = "Home" | "Products" | "About" | "actions";
 export const useTabSwitch = () => {
   const [tab, setTab] = useState<PageType>("Home");
   const [isPendding, startTransition] = useTransition();
