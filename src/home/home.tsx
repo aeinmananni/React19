@@ -1,4 +1,4 @@
-import { Actions } from "../components/actions";
+import { ActionOld, ActionNew } from "../components/actions";
 import { Products } from "../components/products";
 import { useTabSwitch } from "../hooks";
 
@@ -26,10 +26,16 @@ export default function Home() {
           About
         </button>
         <button
-          className={setStyleHandler("actions")}
-          onClick={() => switchTab("actions")}
+          className={setStyleHandler("actionOld")}
+          onClick={() => switchTab("actionOld")}
         >
-          actions
+          actionOld
+        </button>
+        <button
+          className={setStyleHandler("actionNew")}
+          onClick={() => switchTab("actionNew")}
+        >
+          actionNew
         </button>
       </nav>
       <div>
@@ -37,7 +43,8 @@ export default function Home() {
         {tab === "Home" && <h1>Home Page</h1>}
         {tab === "Products" && <Products />}
         {tab === "About" && <h1>About</h1>}
-        {tab === "actions" && <Actions />}
+        {tab === "actionOld" && <ActionOld />}
+        {tab === "actionNew" && <ActionNew />}
       </div>
     </main>
   );

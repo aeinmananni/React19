@@ -1,1 +1,2 @@
-export {default as Actions} from './action-old';
+export {default as ActionOld} from './action-old';
+export {default as ActionNew} from "./action-new";
