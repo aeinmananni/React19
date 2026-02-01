@@ -6,5 +6,6 @@
 
 
 .inputStyles {
-  @apply border w-full rounded-md px-2 py-1;
+  @apply border w-full rounded-md px-2 py-1 outline-none focus:border-blue-500;
 }
+
