@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.inputStyles {
+  @apply border w-full rounded-md px-2 py-1;
+}
