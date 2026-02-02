@@ -7,14 +7,14 @@ export const sleep = (ms:number) =>{
 }
 
 
-export const updateNameInDB = async (newName:string) =>{
+export const updateNameInDB = async (newName:string,version:number) =>{
   await new Promise((resolve) => setTimeout(resolve,1500));
 
   if(newName.toLocaleLowerCase().includes("error")){
     throw new Error("Faild to update name");
   }
 
-  localStorage.setItem('name' , JSON.stringify(newName));
+  localStorage.setItem(`firstName:${version}` , JSON.stringify(newName));
 
   return newName;
 }

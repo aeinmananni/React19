@@ -7,16 +7,16 @@ import { updateNameInDB } from "../../utils";
 // FormEvent<HTMLFormElement>
 
 export default function ActionState(){
-
+const version:number= 1;
     const [name,setName] = useState<string>(
-        () => JSON.parse(localStorage.getItem('name') ?? "") || "Anonymouse"
+        () => String(JSON.parse(localStorage.getItem(`firstName:${version}`) ?? '"Anonymous"'))
     );
 
  
 
     const handelFormAction = async (formData:FormData) =>{
         try{
-            const newName = await updateNameInDB(String(formData?.get("firstName")));
+            const newName = await updateNameInDB(String(formData?.get("firstName")),version);
             setName(newName);
         }catch(err:any){
             console.log("Error : ", err.message)

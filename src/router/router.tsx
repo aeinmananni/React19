@@ -1,7 +1,7 @@
 "use client";
 import { RouteObject, createBrowserRouter } from "react-router";
 import Home from "../home";
-import {Pages,ActionState} from "../containers"
+import {Pages,FormActionState,UseActionState ,UseOptimistic} from "../containers"
 
 const routes: RouteObject[] = [
   {
@@ -13,13 +13,17 @@ const routes: RouteObject[] = [
         element: <Pages />,
       },
       {
-        path: "useActionState",
-        element: <ActionState />,
+        path: "formActionState",
+        element: <FormActionState />,
       },
-      // {
-      //   path: "useOptimistic",
-      //   element: <UseOptimistic />,
-      // },
+      {
+        path: "useActionState",
+        element: <UseActionState />,
+      },
+      {
+        path: "useOptimistic",
+        element: <UseOptimistic />,
+      },
     ],
   },
 ];
